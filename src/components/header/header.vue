@@ -1,11 +1,17 @@
 <template>
-	<div class="header">
-		我是头
-	</div>
+   <div class="header">
+      我是头
+   </div>
 </template>
 
 <script>
-	export default {}
+export default {
+  props: {
+    seller: {
+      type: Object
+    }
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

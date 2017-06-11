@@ -3,16 +3,15 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
 Vue.config.productionTip = false
 
 // eslint单行验证
 /* eslint-disable no-new */
 new Vue({
-  // el: '#app',
+    // el: '#app',
   router,
   template: '<App/>',
-  components: {App}
+  components: { App }
 }).$mount('#app')
 
 router.push('/')

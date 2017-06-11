@@ -22,19 +22,19 @@ var goods = appData.goods
 var ratings = appData.ratings
 // 创建路由路径的链式路由句柄
 var apiRouter = express.Router()
-apiRouter.get('/seller', function (req, res) {
+apiRouter.all('/seller', function (req, res) {
   res.json({
     errno: 0,
     data: seller
   })
 })
-apiRouter.get('/goods', function (req, res) {
+apiRouter.all('/goods', function (req, res) {
   res.json({
     errno: 0,
     data: goods
   })
 })
-apiRouter.get('/ratings', function (req, res) {
+apiRouter.all('/ratings', function (req, res) {
   res.json({
     errno: 0,
     data: ratings
