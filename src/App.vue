@@ -32,6 +32,7 @@ export default {
     api.getSeller().then(res => {
       if (res.data.errno === type.ERR_OK) {
         this.seller = res.data.data
+        console.log(this.seller)
       }
     })
   },

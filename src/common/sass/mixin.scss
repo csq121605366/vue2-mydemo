@@ -29,3 +29,33 @@
   }
 }
 
+@mixin bg-image($url) {
+  background-image: url($url + '@2x.png');
+  @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+    background-image: url($url + '@3x.png');
+  }
+}
+
+@mixin blur($num:10) {
+  -webkit-filter: blur($num + px); /* Chrome, Opera */
+  -moz-filter: blur($num + px);
+  -ms-filter: blur($num + px);
+  filter: blur($num + px);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=$num, MakeShadow=false); /* IE6~IE9 */
+}
+
+@mixin clearfix{
+  *zoom: 1;
+  &:after{
+    display: table;
+  }
+  &:before,
+  &:after {
+    display: table;
+    line-height: 0;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
