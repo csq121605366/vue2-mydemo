@@ -32,7 +32,6 @@ export default {
     api.getSeller().then(res => {
       if (res.data.errno === type.ERR_OK) {
         this.seller = res.data.data
-        console.log(this.seller)
       }
     })
   },
@@ -51,7 +50,7 @@ export default {
   line-height: 40px;
   height: 40px;
   width: 100%;
-  @include border-1px(#999);
+  @include border-1px(#eee);
   &-item {
     flex: 1;
     text-align: center;

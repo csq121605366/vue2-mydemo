@@ -16,16 +16,16 @@ const instance = axios.create()
 // 添加请求拦截器
 axios.interceptors.request.use = instance.interceptors.request.use
 instance.interceptors.request.use((config) => {
-// 发送请求之前要做的事情
-  // if (localStorage.getItem('token')) {
-  //   config.headers.Authorization = `token ${localStorage.getItem('token')}`.replace(/(^")|("$)/g, '')
-  // }
+        // 发送请求之前要做的事情
+        // if (localStorage.getItem('token')) {
+        //   config.headers.Authorization = `token ${localStorage.getItem('token')}`.replace(/(^")|("$)/g, '')
+        // }
   return config
 }, err => {
-// 请求失败报错
+        // 请求失败报错
   return Promise.reject(err)
 })
-// axios拦截响应
+    // axios拦截响应
 instance.interceptors.response.use((response) => {
   return response
 }, err => {
@@ -37,5 +37,11 @@ export default {
     // 用户注册
   getSeller(data) {
     return instance.get('/api/seller', data)
+  },
+  getGoods(data) {
+    return instance.get('/api/goods', data)
+  },
+  getRatings(data) {
+    return instance.get('/api/ratings', data)
   }
 }

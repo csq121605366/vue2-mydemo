@@ -16,7 +16,6 @@
   .m-tit {
     display: flex;
     align-items: center;
-    width: 80%;
     margin: 28px auto 24px;
     &__line {
       flex: 1;
